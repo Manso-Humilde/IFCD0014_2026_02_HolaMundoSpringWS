@@ -14,6 +14,8 @@ public class CalculadoraController {
     @Autowired
     private CalculadoraService calculadoraService;
 
+    //http://localhost:8080/sumar?numero1=5&numero2=20
+    //"/sumar?numero1=5&numero2=20"
     @GetMapping("/sumar")
     public Resultado sumar(@RequestParam Integer numero1, @RequestParam Integer numero2){
         Integer resultado = calculadoraService.sumar(numero1, numero2);

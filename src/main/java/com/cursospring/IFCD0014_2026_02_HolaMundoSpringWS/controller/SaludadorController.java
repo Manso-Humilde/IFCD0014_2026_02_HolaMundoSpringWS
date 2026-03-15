@@ -15,6 +15,8 @@ public class SaludadorController {
     @Autowired
     private SaludadorService saludadorService;
 
+    //http://localhost:8080/?nombre=Dario
+
     @GetMapping("/")
     public List<Saludo> saludar(@RequestParam String nombre){
         List<Saludo> saludos = saludadorService.getSaludos(nombre);
